@@ -346,21 +346,3 @@ def get_config():
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))
     app.run(debug=False, host='0.0.0.0', port=port)
-```
-
-5. Click **Commit changes** (green button)
-
----
-
-## What This Does
-
-- `os.environ.get('PORT', 5000)` → Uses Railway's assigned port
-- `debug=False` → Production mode (required for Railway)
-
----
-
-## After Committing
-
-Railway will automatically detect the change and redeploy. Wait 1-2 minutes, then test again:
-```
-https://soundscan-api-production.up.railway.app/api/config
